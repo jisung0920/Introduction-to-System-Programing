@@ -4,14 +4,14 @@
 double my_sqrt(double number){
 	double result;
 	result = number;
+	int i=0;
 
-
-	while((result*result<number)&&result>number*(0.5))
-		result=result/2;
-		
-
-	int i=1;
+	do{
+		result = result/2;
+	}
+	while((result*result>number));
 	
+	printf("\nresult : %lf",result);	
 	while(i++<10000)
 		result=(0.5)*(result+number/result);
 
