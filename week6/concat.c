@@ -16,10 +16,12 @@ int main(int argc, char const *argv[]){
 char* concat(char* a, char* b){
 	int ai=strlen(a);
 	int bi=strlen(b);
-	char* str =(char*)malloc(ai+bi);
+
+	char* str =(char*)malloc(ai+bi+1);
 	for(int i=0;i<ai;i++)
 		*(str+i)=a[i];
 	for(int i=0;i<bi;i++)
 		*(str+ai+i)=b[i];
+	*(str+ai+bi)='\0';
 	return str;
 }
