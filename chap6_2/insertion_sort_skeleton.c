@@ -39,20 +39,23 @@ int main(int argc, char const* argv[]){
 }
 
 void insertion_sort(int a[], int n){
-	int tmp,idx=0,i,j;
-	for(i=1;i<n;i++){
-		//tmp = a[i];
-		printf("===================place%d\n",i );
-		for(j=i-1;j>-1;j--){
-			if(a[j]>a[i]){
-				printf("swap %d %d\n",a[i],a[j]);
-				swap(&a[i],&a[j]);
-				print_array(a,n);
+
+	for(int i=1;i<n;i++){
+			printf("===============%d place\n",i);
+			for(int j=0;j<i;j++){
+				if(a[i]<a[j]){
+					printf("insert %d to idx %d\n",a[i],j);
+					for(int k=i;k>j;k--){
+							printf("swap %d %d\n",a[k],a[k-1]);
+							swap(&(a[k]),&(a[k-1]));
+							print_array(a,n);
+					}
+
+					break;
+				}
+
 			}
 		}
-
-
-	}
 
 }
 
