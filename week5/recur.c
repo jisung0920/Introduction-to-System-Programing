@@ -13,7 +13,7 @@ void recursiveFun_2(int num){
 	printf("recusive Function 2 : %d\n",num);
 }
 
-int main(int argc,char cont *argv[]){
+int main(int argc,char const (*argv)[]){
 	recursiveFun_1(1);
 	printf("\n");
 	recursiveFun_2(1);

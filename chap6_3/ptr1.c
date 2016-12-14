@@ -37,7 +37,7 @@ int main()
 	int i,j,k;
 
 	b = (double(*)[4][3])malloc(sizeof(double[3]));
-	b=a;
+	b=a;//b는 배열 4행 3열짜리 3차원 배열을 저장하는 변수
 	// Initialize b by a.
 
 	print_triple_array("b",b,3,4,3);
@@ -46,7 +46,7 @@ int main()
 	// Initalize c by b. Use double loops.
 	for(int j=0;j<3;j++){
 		for(int i=0;i<4;i++){
-			c[j][i]=b[j][i];
+			c[j][i]=b[j][i];//c는 4행 열을 저장하는
 		}
 	}
 
